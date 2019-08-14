@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Test</title>
+    <style type="text/css">
+        form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 200px;
+        }
+        button {
+            align-self: center;
+            flex-grow: 2;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<form method="post">
+    <p>Login System</p>
+    <div><input type="text" placeholder="UserName" name="userName"><br/></div>
+    <div><input type="password" placeholder="PassWord" name="passWord" id="inp"><br/>
+    </div>
+    <button type="submit">提交</button>
+</form>
+<script type="application/javascript">
+    var input = document.getElementById("inp");
+    var width = window.getComputedStyle(input,null).width;
+    var btn = document.querySelector("button");
+    btn.style.width = (+width.replace("px","") + 5) + "px";
+</script>
+</body>
+</html>

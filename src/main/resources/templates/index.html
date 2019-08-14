@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+        .tt {
+            padding-bottom: 20px;
+        }
+        .ff {
+            position: fixed;
+            bottom: 30px;
+            left: 0;
+            right: 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">HuginnTask<span class="small">&nbsp; 任务调度系统</span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/task/demo_group/fetch">Tasks</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://blog.mazhangjing.com">Blog</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://www.mazhangjing.com/index.html">Author</a>
+            </li>
+        </ul>
+    </div>
+    <span class="navbar-text">
+        <a class="navbar-text" href="/login" shiro:guest="">Login</a>
+        <a class="navbar-text" href="/logout" shiro:authenticated=""><shiro:principal/> | Logout</a>
+    </span>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="jumbotron mt-5 tt">
+                <h1 class="display-4">Hello, World!</h1>
+                <p class="lead">这是我的分布式任务调度系统 Beta 版本，欢迎使用。</p>
+                <p class="lead mt-5">
+                    <a class="btn btn-outline-primary btn-lg" href="http://github.com/corkine" role="button">代码仓库</a>
+                    &nbsp;&nbsp;
+                    <a class="btn btn-outline-primary btn-lg" href="http://github.com/corkine" role="button">了解更多</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <footer class="ff text-center text-muted">Powered by Spring Framework and Scala |
+        Design and Code by ♞CorkineMa️</footer>
+    </div>
+</div>
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.js"></script>
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+<script type="application/javascript">
+</script>
+</body>
+</html>
